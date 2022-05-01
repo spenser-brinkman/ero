@@ -1,4 +1,7 @@
-By including the ::ero module in your Rails classes or modules, you can call ero from any 
+# Ero - Expressive Rails Oopsies
+Lightweight gem providing access to the utility module `Ero`.
+
+By including the Ero in your Rails classes or modules, you can call ero to write method failures to the Rails logs at the error level.
 
 Calling `ExampleKlass.new.foo` with the following class defined...
 ```

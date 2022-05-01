@@ -1,9 +1,8 @@
 # Ero - Expressive Rails Oopsies
 Lightweight gem providing access to the utility module `Ero`.
 
-By including the Ero in your Rails classes or modules, you can call ero to write method failures to the Rails logs at the error level.
+By including Ero in your Rails classes or modules, you can use #ero to write error-level log entries for method failures.
 
-Calling `ExampleKlass.new.foo` with the following class defined...
 ```
 class ExampleKlass
   include ::Ero

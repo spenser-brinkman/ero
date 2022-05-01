@@ -1,9 +1,10 @@
-# Include this module in a Rails class or module to gain access to function #ero
+# Provides .ero and #ero to classes and modules to which this module is included.
 module Ero
   def ero(message: nil, error: nil)
     class_name = self.is_a?(Module) ? self.name : self.class.name
     separator = self.is_a?(Module) ? '.' : '#'
-    # Extract the originating method's name from near the end of the first line of the current stack trace
+    # Extract the originating method's name from near the end of the first
+    # line of the current stack trace, then trim extraneous verbage:
     method_name = caller[0][/`.*'/][1..-2].gsub(/.+ in /, '')
 
     failure_to_log =

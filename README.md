@@ -3,23 +3,12 @@ Lightweight gem providing access to the utility module `Ero`.
 
 By including Ero in your Rails classes or modules, you can use #ero to write error-level log entries for method failures.
 
-# One
-one
+## Usage
+Ero provides an instance method `#ero` and class method `.ero`. These methods behave identically.
+Both, either, or neither of the two optional named parameters, `msg` and `err`, may be provided.
+Without arguments, only a base message will be logged: "Class.method failed" or "Class#method failed".
+If provided, `msg` will be prepended and `err` will be appended to the base. Refer to the example implementation on how the logged message changes with different arguments.
 
-## Two
-two
-
-### Three
-three
-
-#### Four
-four
-
-##### Five
-five
-
-###### Six
-six
 ```
 class ExampleKlass
   include ::Ero
@@ -49,8 +38,11 @@ module ExampleModule
 end
 
 ExampleKlass.new.find_a_thing(1)
+=> "Record not found - ExampleKlass#find_a_thing failed"
+
 ExampleKlass.instafail
+=> "ExampleKlass.instafail failed - StandardError"
+
 ExampleModule.divide_by_zero
+=> "Hm, I thought this would work... - ExampleModule.divide_by_zero failed - divided by 0"
 ```
-...will write the following line to the error level of your application's Rails log:
-"Couldn't do the thing you were trying to do. - ExampleKlass#foo failed - undefined method `+' for nil:NilClass"

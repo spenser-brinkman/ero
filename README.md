@@ -5,8 +5,11 @@ By including Ero in your Rails classes or modules, you can use #ero to write err
 
 ## Usage
 Ero provides an instance method `#ero` and class method `.ero`. These methods behave identically.
+
 Both, either, or neither of the two optional named parameters, `msg` and `err`, may be provided.
+
 Without arguments, only a base message will be logged: "Class.method failed" or "Class#method failed".
+
 If provided, `msg` will be prepended and `err` will be appended to the base. Refer to the example implementation on how the logged message changes with different arguments.
 
 ```ruby

@@ -14,7 +14,7 @@ module Ero
       when [false, false] then "#{class_name}#{separator}#{method_name} failed"
       end
 
-    # Rails.logger.error(failure_to_log)
+    Rails.logger.error(failure_to_log)
   end
 
   def self.included(base)
@@ -37,8 +37,7 @@ module Ero
         when [false, false] then "#{class_name}#{separator}#{method_name} failed"
         end
 
-        p failure_to_log
-      # Rails.logger.error(failure_to_log)
+      Rails.logger.error(failure_to_log)
     end
   end
 end

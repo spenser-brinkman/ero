@@ -5,7 +5,7 @@ class ExampleKlass
 
   def find_a_thing(id)
     example_record = ExampleModel.find(id)
-    return ero(message: 'Record not found') unless example_record.present
+    return ero(msg: 'Record not found') unless example_record.present
 
     example_record
   end
@@ -13,7 +13,7 @@ class ExampleKlass
   def self.instafail
     raise StandardError
   rescue StandardError => e
-    ero(error: e)
+    ero(err: e)
   end
 end
 
@@ -23,7 +23,7 @@ module ExampleModule
   def self.divide_by_zero
     1 / 0
   rescue ZeroDivisionError => e
-    ero(message: 'Hm, I thought this would work...', error: e)
+    ero(msg: 'Hm, I thought this would work...', err: e)
   end
 end
 

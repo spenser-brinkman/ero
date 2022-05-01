@@ -9,7 +9,7 @@ Both, either, or neither of the two optional named parameters, `msg` and `err`, 
 Without arguments, only a base message will be logged: "Class.method failed" or "Class#method failed".
 If provided, `msg` will be prepended and `err` will be appended to the base. Refer to the example implementation on how the logged message changes with different arguments.
 
-```
+```ruby
 class ExampleKlass
   include ::Ero
 

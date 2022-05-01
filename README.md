@@ -3,6 +3,23 @@ Lightweight gem providing access to the utility module `Ero`.
 
 By including Ero in your Rails classes or modules, you can use #ero to write error-level log entries for method failures.
 
+# One
+one
+
+## Two
+two
+
+### Three
+three
+
+#### Four
+four
+
+##### Five
+five
+
+###### Six
+six
 ```
 class ExampleKlass
   include ::Ero

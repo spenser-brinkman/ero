@@ -41,7 +41,7 @@ module ExampleModule
 end
 ```
 
-```
+```ruby
 ExampleKlass.new.find_a_thing(1)
 => "Record not found - ExampleKlass#find_a_thing failed"
 

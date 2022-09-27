@@ -39,7 +39,9 @@ module ExampleModule
     ero(message: 'Hm, I thought this would work...', error: e)
   end
 end
+```
 
+```
 ExampleKlass.new.find_a_thing(1)
 => "Record not found - ExampleKlass#find_a_thing failed"
 
